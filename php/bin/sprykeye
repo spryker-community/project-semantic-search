@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
+require 'vendor/autoload.php';
+
+use Dotenv\Dotenv;
+use Spryker\SearchChat\Command\AIChatCommand;
+use Spryker\SearchChat\Command\PromptChatCommand;
+use Spryker\IndexProject\Command\IndexProjectCommand;
+use Symfony\Component\Console\Application;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+define('APPLICATION_DIR', realpath(__DIR__ . '/../'));
+define('PROJECT_DIR', realpath(__DIR__ . '/../../project'));
+
+$application = new Application();
+$application->add(new PromptChatCommand());
+$application->add(new IndexProjectCommand());
+$application->run();

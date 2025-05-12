@@ -1,0 +1,27 @@
+{
+    "name": "spryker-project-semantic-search-mcp",
+    "version": "1.0.0",
+    "description": "Model Context Protocol server for Spryker Semantic Search",
+    "main": "src/index.js",
+    "type": "module",
+    "bin": {
+        "spryker-project-semantic-search-mcp": "src/index.js"
+    },
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.0.0",
+        "axios": "^1.6.2",
+        "chromadb": "^1.8.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "zod": "^3.22.4",
+        "winston": "^3.11.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}
