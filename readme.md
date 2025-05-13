@@ -80,12 +80,12 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository into the project root directory:
 ```bash
-   git clone git@github.com:vitaliiivanovspryker/spryker-project-semantic-search.git &&
-   echo "/spryker-project-semantic-search/" >> .git/info/exclude &&
-   cd spryker-project-semantic-search &&
+   git clone git@github.com:spryker-community/project-semantic-search.git &&
+   echo "/project-semantic-search/" >> .git/info/exclude &&
+   cd project-semantic-search &&
    cp php/.env.example php/.env
 ````
-2. Configure environment in `spryker-project-semantic-search/php/.env`
+2. Configure environment in `project-semantic-search/php/.env`
 
 3. Run the installer script:
 
@@ -110,7 +110,7 @@ bash install
 │      ├── src/
 │      │    └── Pyz/
 │      ├── ...
-│      └── spryker-project-semantic-search/
+│      └── project-semantic-search/
 │           ├── php/
 │           │    └── bin/
 │           │         └── sprykeye
