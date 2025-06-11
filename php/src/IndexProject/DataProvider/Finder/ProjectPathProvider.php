@@ -45,7 +45,6 @@ class ProjectPathProvider implements ProjectPathProviderInterface
             $dirs[] = PROJECT_DIR . '/' . $projectSrcDir;
         }
 
-        var_dump($dirs);die();
         return $dirs;
     }
 }
