@@ -37,9 +37,13 @@ class ProjectPathProvider implements ProjectPathProviderInterface
     {
         $dirs = [
             PROJECT_DIR . '/vendor/spryker/spryker',
+            PROJECT_DIR . '/vendor/spryker',
             PROJECT_DIR . '/vendor/spryker/spryker-shop',
+            PROJECT_DIR . '/vendor/spryker-shop',
             PROJECT_DIR . '/vendor/spryker-eco'
         ];
+
+        $dirs = array_filter($dirs, fn($dir) => is_dir($dir));
 
         foreach ($this->config->getProjectSrcDir() as $projectSrcDir) {
             $dirs[] = PROJECT_DIR . '/' . $projectSrcDir;
